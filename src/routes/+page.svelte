@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import AdvantageList from '$lib/components/Advantage/AdvantageList.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Hero from '$lib/components/Hero.svelte';
+</script>
+
+<Header />
+<Hero />
+<div class="container mx-auto">
+	<AdvantageList />
+</div>
