@@ -9,19 +9,20 @@
 	];
 </script>
 
-<h2 class="visually-hidden">Наши преимущества</h2>
-<ul class="advantage-list">
-	{#each advantages as advantage (advantage.id)}
-		<AdvantageCard {...advantage} />
-	{/each}
-</ul>
+<section class="advantage">
+	<h2 class="visually-hidden">Наши преимущества</h2>
+	<ul class="advantage__list">
+		{#each advantages as advantage (advantage.id)}
+			<AdvantageCard {...advantage} />
+		{/each}
+	</ul>
+</section>
 
 <style>
-	.advantage-list {
+	.advantage__list {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 		grid-gap: 20px;
-		padding: 20px;
-		/*background-color: rgb(246 247 248 / var(--tw-bg-opacity, 1));*/
+		padding: 20px 0;
 	}
 </style>

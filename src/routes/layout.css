@@ -14,7 +14,4 @@
 	}
 
 	--primary-color: blue;
-	body {
-		background-color: rgb(246 247 248 / var(--tw-bg-opacity, 1));
-	}
 }

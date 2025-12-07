@@ -9,27 +9,30 @@
 	let { title, iconId }: Props = $props();
 </script>
 
-<li class="card-advantage">
-	<div class="card-advantage__icon">
+<li class="advantage__item">
+	<div class="advantage__icon">
 		<IconSvg width={25} {iconId} fill="primary-color" />
 	</div>
-	<div class="card-advantage__title">
+	<h3 class="advantage__title">
 		{title}
-	</div>
+	</h3>
 </li>
 
 <style>
-	.card-advantage {
+	.advantage__item {
 		display: flex;
 		gap: 20px;
 		align-items: center;
 		padding: 15px;
 
-		font-size: 16px;
-		line-height: 1.25;
-		font-weight: 600;
 		background-color: rgb(255 255 255 / 0.9);
 		border: 1px solid rgb(299 231 235 / 0.8);
 		border-radius: 0.5rem;
+	}
+
+	.advantage__item {
+		font-size: 16px;
+		line-height: 1.25;
+		font-weight: 600;
 	}
 </style>
