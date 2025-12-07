@@ -2,12 +2,11 @@
 	import IconSvg from '../ui/icon-svg/IconSvg.svelte';
 
 	interface Props {
-		id: number;
 		title: string;
 		iconId: string;
 	}
 
-	let { id, title, iconId }: Props = $props();
+	let { title, iconId }: Props = $props();
 </script>
 
 <li class="card-advantage">
@@ -24,9 +23,9 @@
 		display: flex;
 		gap: 20px;
 		align-items: center;
-		padding: 10px;
+		padding: 15px;
 
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 1.25;
 		font-weight: 600;
 		background-color: rgb(255 255 255 / 0.9);

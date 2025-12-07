@@ -1,7 +1,7 @@
 <script>
-	import AdvantageCard from './AdvantageCard.svelte';
+	import EquipmentCard from './EquipmentCard.svelte';
 
-	const advantages = [
+	const equipments = [
 		{ id: 1, title: 'Большой парк', iconId: 'truck-line' },
 		{ id: 2, title: 'Опытные операторы', iconId: 'engenier' },
 		{ id: 3, title: 'Доставка на объект', iconId: 'cube' },
@@ -9,10 +9,11 @@
 	];
 </script>
 
-<h2 class="visually-hidden">Наши преимущества</h2>
+<h2 class="">Наша техника</h2>
 <ul class="advantage-list">
-	{#each advantages as advantage (advantage.id)}
-		<AdvantageCard {...advantage} />
+	{#each equipments as equipment (equipment.id)}
+		<!-- <p>{advantage.title}</p> -->
+		<EquipmentCard {...equipment} />
 	{/each}
 </ul>
 

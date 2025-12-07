@@ -1,5 +1,5 @@
 <script>
-	import AdvantageList from '$lib/components/Advantage/AdvantageList.svelte';
+	import AdvantageList from '$lib/components/advantage/AdvantageList.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 </script>
