@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v4
       - uses: oven-sh/setup-bun@v1
         with:
-          node-version: '20'
+          node-version: 20
           bun-version: latest
       - run: bun install
       - run: bun build
