@@ -1,6 +1,8 @@
 <section class="hero">
-	<h1 class="hero__title">Аренда спецтехники</h1>
-	<p class="hero__description">Надежная техника для ваших задач в Сургуте и ХМАО</p>
+	<div class="container mx-auto pl-5 pr-5">
+		<h1 class="hero__title">Аренда спецтехники</h1>
+		<p class="hero__description">Надежная техника для ваших задач в Сургуте и ХМАО</p>
+	</div>
 </section>
 
 <style>

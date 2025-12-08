@@ -1,46 +1,52 @@
-<script>
-	import IconSvg from '$lib/components/ui/icon-svg/IconSvg.svelte';
-</script>
-
-<section class="contacts">
-	<h3 class="contacts__title">Реквизиты</h3>
-	<div class="contacts__content">
-		<a href="tel:+79211234567" class="contacts__item contacts__link">
-			<IconSvg iconId="phone" />
-			<span>+7 (921) 123-45-67</span>
-		</a>
-		<a href="mailto:info@spectech-surgut.ru" class="contacts__item contacts__link">
-			<IconSvg iconId="mail" />
-			<span>info@spectech-surgut.ru</span>
-		</a>
-
-		<address class="contacts__item contacts__address">
-			<IconSvg iconId="location" />
-			<span>г. Сургут, ул. Ленина, д. 1</span>
-		</address>
-	</div>
+<section class="requisites">
+	<h3 class="requisites__title">Реквизиты</h3>
+	<h4 class="requisites__legal-name">ИП Мастеров Денис Иванович</h4>
+	<dl class="requisites__content">
+		<div class="requisites__item">
+			<dt>ИНН:</dt>
+			<dd>8602026226</dd>
+		</div>
+		<div class="requisites__item">
+			<dt>ОГРН:</dt>
+			<dd>1234567890123</dd>
+		</div>
+		<div class="requisites__item">
+			<dt>Юр. адрес:</dt>
+			<dd>г. Сургут, ул.&nbsp;Иосифа Каролинского, д.&nbsp;9</dd>
+		</div>
+	</dl>
 </section>
 
 <style>
-	.contacts__title {
-		font-size: 24px;
-		font-weight: bold;
+	.requisites__title {
 		margin-bottom: 10px;
+
+		font-size: 20px;
+		font-weight: bold;
 	}
 
-	.contacts__content {
+	.requisites__legal-name {
+		margin-bottom: 10px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.requisites__content {
 		display: flex;
 		flex-direction: column;
 		gap: 5px;
 	}
 
-	.contacts__item {
-		display: flex;
-		align-items: center;
+	.requisites__item {
+		display: grid;
+		grid-template-columns: 80px 1fr;
+		justify-content: space-between;
 		gap: 15px;
+
+		font-size: 14px;
 	}
 
-	.contacts__address {
-		font-style: unset;
+	.requisites__item dt {
+		font-weight: bold;
 	}
 </style>

@@ -15,8 +15,8 @@
 
 <style>
 	.page {
-		height: 100vh;
-		height: 100dvh;
+		min-height: 100vh;
+		min-height: 100dvh;
 		background-color: rgb(246 247 248 / var(--tw-bg-opacity, 1));
 	}
 </style>

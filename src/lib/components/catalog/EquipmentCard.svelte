@@ -23,7 +23,14 @@
 		background-color: rgb(255 255 255 / 0.9);
 		border: 1px solid rgb(299 231 235 / 0.8);
 		border-radius: 0.5rem;
+
 		overflow: hidden;
+		transition: box-shadow 0.3s ease-in-out;
+		cursor: pointer;
+	}
+
+	.equipment-card:hover {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	}
 
 	.equipment-card__wrapper {

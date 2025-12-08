@@ -7,7 +7,7 @@
 	<div class="contacts__content">
 		<a href="tel:+79211234567" class="contacts__item contacts__link">
 			<IconSvg iconId="phone" />
-			<span>+7 (921) 123-45-67</span>
+			<span>+7&nbsp(912)&nbsp815-95-44</span>
 		</a>
 		<a href="mailto:info@spectech-surgut.ru" class="contacts__item contacts__link">
 			<IconSvg iconId="mail" />
@@ -16,14 +16,14 @@
 
 		<address class="contacts__item contacts__address">
 			<IconSvg iconId="location" />
-			<span>г. Сургут, ул. Ленина, д. 1</span>
+			<span>г. Сургут, ул.&nbsp;Иосифа Каролинского, д.&nbsp;9</span>
 		</address>
 	</div>
 </section>
 
 <style>
 	.contacts__title {
-		font-size: 24px;
+		font-size: 20px;
 		font-weight: bold;
 		margin-bottom: 10px;
 	}
@@ -42,5 +42,14 @@
 
 	.contacts__address {
 		font-style: unset;
+	}
+
+	a.contacts__item {
+		text-decoration: underline;
+		transition: color 0.3s ease;
+	}
+
+	a.contacts__item:hover {
+		color: var(--primary-color);
 	}
 </style>
