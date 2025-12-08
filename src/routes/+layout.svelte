@@ -25,7 +25,7 @@
 	<meta property="og:locale" content="ru" />
 	<meta property="og:url" content="https://spectech-surgut.ru" />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="images/chicken_classic.png" />
+	<meta property="og:image" content="images/catalog/mini-excavator.webp" />
 	<meta property="og:image:alt" content="Классический дёнер" />
 	<meta property="og:description" content={metaDescription} />
 </svelte:head>

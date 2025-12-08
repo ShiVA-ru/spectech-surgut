@@ -9,13 +9,9 @@
 		fill?: string;
 	}
 
-	let {
-		class: className = '',
-		iconId,
-		width = 20,
-		height = width,
-		fill = 'light'
-	}: Props = $props();
+	let { class: className = '', iconId, width = 20, height, fill = 'light' }: Props = $props();
+
+	let actualHeight = $derived(height ?? width);
 </script>
 
 {#if iconId}
@@ -25,7 +21,7 @@
 		class="nc-icon {className}"
 		viewBox="0 0 {width} {height}"
 		{width}
-		{height}
+		height={actualHeight}
 		fill="var(--{fill})"
 		stroke="var(--{fill})"
 	>
