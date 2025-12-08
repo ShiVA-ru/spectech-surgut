@@ -15,7 +15,7 @@ jobs:
           node-version: 20
           bun-version: latest
       - run: bun install
-      - run: bun build
+      - run: bun run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
