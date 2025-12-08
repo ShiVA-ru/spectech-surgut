@@ -9,7 +9,7 @@
 </script>
 
 <li class="equipment-card">
-	<img class="equipment-card__image" src={url} alt={title} />
+	<img class="equipment-card__image" src={url} alt={title} loading="lazy" />
 	<div class="equipment-card__wrapper">
 		<h3 class="equipment-card__title">
 			{title}
