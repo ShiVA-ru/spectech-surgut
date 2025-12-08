@@ -16,7 +16,10 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+		alias: {
+			$lib: './src/lib' // Убедитесь что это есть
+		}
 	}
 };
 
