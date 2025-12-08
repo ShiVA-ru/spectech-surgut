@@ -2,6 +2,7 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import CallButton from '$lib/components/ui/CallButton.svelte';
+	import FeatureCallButton from '$lib/components/ui/FeatureCallButton.svelte';
 
 	let { children } = $props();
 
@@ -32,7 +33,8 @@
 
 <div class="page">
 	{@render children()}
-	<CallButton />
+	<!-- <CallButton /> -->
+	<FeatureCallButton />
 </div>
 
 <style>
