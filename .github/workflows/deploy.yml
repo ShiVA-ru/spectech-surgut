@@ -16,7 +16,7 @@ jobs:
           bun-version: latest
       - run: bun install
       - run: bun build
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
       - uses: actions/deploy-pages@v4
