@@ -25,7 +25,7 @@
 		fill="var(--{fill})"
 		stroke="var(--{fill})"
 	>
-		<use xlink:href="/icons/sprite.svg#{iconId}" />
+		<use xlink:href="icons/sprite.svg#{iconId}" />
 	</svg>
 {/if}
 

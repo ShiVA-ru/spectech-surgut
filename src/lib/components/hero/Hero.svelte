@@ -6,7 +6,7 @@
 			height="100%"
 			media="(max-width: 599px)"
 			type="image/webp"
-			srcset="/images/excavator-420.webp"
+			srcset="images/excavator-420.webp"
 		/>
 
 		<!-- Планшет -->
@@ -16,7 +16,7 @@
 			height="100%"
 			media="(min-width: 600px) and (max-width: 1199px)"
 			type="image/webp"
-			srcset="/images/excavator-800.webp"
+			srcset="images/excavator-800.webp"
 		/>
 
 		<!-- Десктоп -->
@@ -26,7 +26,7 @@
 			height="100%"
 			media="(min-width: 1200px)"
 			type="image/webp"
-			srcset="/images/excavator.webp"
+			srcset="images/excavator.webp"
 		/>
 		<!-- <source
 			width="100%"
