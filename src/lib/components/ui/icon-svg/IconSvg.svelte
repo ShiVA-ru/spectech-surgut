@@ -19,7 +19,7 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<svg
 		class="nc-icon {className}"
-		viewBox="0 0 {width} {height}"
+		viewBox="0 0 {width} {actualHeight}"
 		{width}
 		height={actualHeight}
 		fill="var(--{fill})"
