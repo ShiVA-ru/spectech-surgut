@@ -20,7 +20,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: dev ? '' : '/spectech-surgut' // ваше название репозитория
+			// base: dev ? '' : '/spectech-surgut' // ваше название репозитория
 		},
 		alias: {
 			$lib: './src/lib' // Убедитесь что это есть
