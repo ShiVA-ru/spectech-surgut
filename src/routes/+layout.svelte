@@ -19,22 +19,33 @@
 	<link rel="yandex-tableau-widget" href="tableau.json" />
 
 	<!-- <link rel="icon" href={favicon} /> -->
-	<title>Спецтехника Сургут</title>
+	<title>{siteTitle}</title>
 	<meta name="description" content={metaDescription} />
 
 	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 	<link rel="canonical" href="https://spectech-surgut.ru" />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content="images/catalog/mini-excavator.webp" />
+	<!-- <meta name="twitter:image" content="images/catalog/mini-excavator.webp" /> -->
+	<meta
+		name="twitter:image"
+		content="https://spectech-surgut.ru/images/catalog/mini-excavator.webp"
+	/>
 
+	<meta property="og:title" content={siteTitle} />
 	<meta property="og:site_name" content={siteTitle} />
 	<meta property="og:locale" content="ru" />
 	<meta property="og:url" content="https://spectech-surgut.ru" />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="images/catalog/mini-excavator.webp" />
-	<meta property="og:image:alt" content="Классический дёнер" />
+	<!-- <meta property="og:image" content="images/catalog/mini-excavator.webp" /> -->
+	<meta
+		property="og:image"
+		content="https://spectech-surgut.ru/images/catalog/mini-excavator.webp"
+	/>
+	<meta property="og:image:alt" content="Аренда спецтехники в Сургуте" />
 	<meta property="og:description" content={metaDescription} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
 </svelte:head>
 
 <div class="page">
