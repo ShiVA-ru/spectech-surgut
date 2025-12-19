@@ -13,3 +13,6 @@ coverage
 .idea
 *.swp
 *.swo
+package-lock.json
+npm-debug.log
+yarn.lock
