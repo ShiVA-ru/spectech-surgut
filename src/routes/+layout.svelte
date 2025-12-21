@@ -15,7 +15,7 @@
 	<!-- 180x180 - ставим первым для safari -->
 	<link rel="icon" href="favicon.ico" sizes="any" /><!-- 32x32 -->
 	<link rel="icon" href="icon.svg" type="image/svg+xml" />
-	<link rel="manifest" href="manifest.webmanifest" />
+	<link rel="manifest" href="/manifest.webmanifest" />
 	<link rel="yandex-tableau-widget" href="tableau.json" />
 
 	<!-- <link rel="icon" href={favicon} /> -->

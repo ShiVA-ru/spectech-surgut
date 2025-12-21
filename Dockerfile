@@ -11,7 +11,7 @@ RUN bun run build
 FROM oven/bun AS frontend
 WORKDIR /app
 COPY --from=frontend-builder /app/build ./build
-COPY --from=frontend-builder /app/node_modules ./node_modules
+# COPY --from=frontend-builder /app/node_modules ./node_modules
 COPY --from=frontend-builder /app/package.json ./package.json
 COPY package*.json ./
 RUN bun ci:prod

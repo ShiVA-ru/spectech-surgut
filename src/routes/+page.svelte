@@ -6,7 +6,7 @@
 	import Hero from '$lib/components/hero/Hero.svelte';
 </script>
 
-<Header />
+<!-- <Header /> -->
 <main>
 	<Hero />
 	<div class="container mx-auto pr-5 pl-5">
