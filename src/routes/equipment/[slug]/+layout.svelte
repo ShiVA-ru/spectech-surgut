@@ -1,8 +1,10 @@
 <script lang="ts">
+	import Footer from '$lib/components/footer/Footer.svelte';
 	import Header from '$lib/components/header/Header.svelte';
 
-	let { data, children } = $props();
+	let { children } = $props();
 </script>
 
-<Header title={data.equipment.title} />
+<Header />
 {@render children()}
+<Footer />

@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import IconSvg from '$lib/components/ui/icon-svg/IconSvg.svelte';
-
-	const { title } = $props();
 </script>
 
 <header class="page-header">
@@ -10,7 +8,7 @@
 		<a class="page-header__link" href={resolve('/')} title="На главную">
 			<IconSvg iconId="arrow-left" fill="black-color" width={20} />
 		</a>
-		<h1 class="page-header__title">{title}</h1>
+		<h1 class="page-header__title">Информация о технике</h1>
 	</div>
 </header>
 
