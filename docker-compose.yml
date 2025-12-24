@@ -2,10 +2,10 @@ services:
   frontend:
     build: .
     ports:
-      - '3000:3000'
+      - '127.0.0.1:3000:3000'
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=postgresql://postgres:password@db:5432/spectech
+      # - DATABASE_URL=postgresql://postgres:password@db:5432/spectech
     # depends_on:
     # - db
     restart: unless-stopped
