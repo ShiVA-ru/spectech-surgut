@@ -37,6 +37,7 @@
 	<meta property="og:locale" content="ru" />
 	<meta property="og:url" content="https://spectech-surgut.ru" />
 	<meta property="og:type" content="website" />
+	<meta property="og:logo" content="/icon.png" />
 	<!-- <meta property="og:image" content="images/catalog/mini-excavator.webp" /> -->
 	<meta
 		property="og:image"
