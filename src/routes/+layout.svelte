@@ -37,11 +37,11 @@
 	<meta property="og:locale" content="ru" />
 	<meta property="og:url" content="https://spectech-surgut.ru" />
 	<meta property="og:type" content="website" />
-	<meta property="og:logo" content="https://spectech-surgut.ru/icon.png" />
+	<meta property="og:logo" content="https://spectech-surgut.ru/icon.png?v=2" />
 	<!-- <meta property="og:image" content="images/catalog/mini-excavator.webp" /> -->
 	<meta
 		property="og:image"
-		content="https://spectech-surgut.ru/images/catalog/mini-excavator.webp"
+		content="https://spectech-surgut.ru/images/catalog/mini-excavator.webp?v=2"
 	/>
 	<meta property="og:image:alt" content="Аренда спецтехники в Сургуте" />
 	<meta property="og:description" content={metaDescription} />
