@@ -7,8 +7,8 @@
 			<dd>8602026226</dd>
 		</div>
 		<div class="requisites__item">
-			<dt>ОГРН:</dt>
-			<dd>1234567890123</dd>
+			<dt>ОГРНИП:</dt>
+			<dd>313860224700058</dd>
 		</div>
 		<div class="requisites__item">
 			<dt>Юр. адрес:</dt>

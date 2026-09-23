@@ -2,6 +2,8 @@
 	import './layout.css';
 	// import favicon from '$lib/assets/favicon.svg';
 	import FeatureCallButton from '$lib/components/ui/FeatureCallButton.svelte';
+	import Maintenance from '$lib/components/Maintenance.svelte';
+	const isMaintenance = true;
 
 	let { children } = $props();
 
@@ -50,7 +52,11 @@
 </svelte:head>
 
 <div class="page">
-	{@render children()}
+	{#if isMaintenance === true}
+		<Maintenance />
+	{:else}
+		{@render children()}
+	{/if}
 	<FeatureCallButton />
 </div>
 
