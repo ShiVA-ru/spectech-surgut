@@ -53,8 +53,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     min-height: 100vh;
-    padding: 20px;
+    min-height: 100dvh;
+    padding: 10px;
+
     background: linear-gradient(135deg, #1a3a52 0%, #2c5f7f 100%);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: #333;
