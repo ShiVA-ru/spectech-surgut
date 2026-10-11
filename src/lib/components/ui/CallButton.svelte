@@ -2,9 +2,9 @@
 	import IconSvg from './icon-svg/IconSvg.svelte';
 </script>
 
-<a href="tel:+79211234567" class="call">
+<a href="tel:+79128159544" class="call">
 	<IconSvg iconId="phone-solid" width={30} />
-	<span class="visually-hidden">Позвонить по телефону +79211234567</span>
+	<span class="visually-hidden">Позвонить по телефону +79128159544</span>
 </a>
 
 <style>
