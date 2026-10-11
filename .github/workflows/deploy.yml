@@ -4,24 +4,14 @@ on:
   push:
     branches: [develop]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
       - run: bun install
       - run: bun run build
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
-      - uses: actions/deploy-pages@v4
