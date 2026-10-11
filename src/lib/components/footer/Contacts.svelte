@@ -1,13 +1,14 @@
 <script>
 	import IconSvg from '$lib/components/ui/icon-svg/IconSvg.svelte';
+	import { contacts } from '$lib/contacts.js';
 </script>
 
 <section class="contacts">
 	<h3 class="contacts__title">Контакты</h3>
 	<div class="contacts__content">
-		<a href="tel:+79128159544" class="contacts__item contacts__link">
+		<a href="tel:{contacts.phoneLink}" class="contacts__item contacts__link">
 			<IconSvg iconId="phone" />
-			<span>+7&nbsp(912)&nbsp815-95-44</span>
+			<span>{contacts.phoneNbsp}</span>
 		</a>
 		<a href="mailto:info@spectech-surgut.ru" class="contacts__item contacts__link">
 			<IconSvg iconId="mail" />

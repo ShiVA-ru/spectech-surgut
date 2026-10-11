@@ -1,10 +1,11 @@
 <script>
 	import IconSvg from './icon-svg/IconSvg.svelte';
+	import { contacts } from '$lib/contacts.js';
 </script>
 
-<a href="tel:+79128159544" class="call">
+<a href="tel:{contacts.phoneLink}" class="call">
 	<IconSvg iconId="phone-solid" width={30} />
-	<span class="visually-hidden">Позвонить по телефону +79128159544</span>
+	<span class="visually-hidden">Позвонить по телефону {contacts.phoneLink}</span>
 </a>
 
 <style>
