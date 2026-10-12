@@ -1,5 +1,5 @@
 <script>
-	import { contacts } from '$lib/contacts.js';
+	import { contacts } from '#lib/contacts.js';
 </script>
 
 <section class="requisites">

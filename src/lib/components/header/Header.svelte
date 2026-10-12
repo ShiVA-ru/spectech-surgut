@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import IconSvg from '$lib/components/ui/icon-svg/IconSvg.svelte';
+	import IconSvg from '#lib/components/ui/icon-svg/IconSvg.svelte';
 </script>
 
 <header class="page-header">

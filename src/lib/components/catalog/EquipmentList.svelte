@@ -1,5 +1,5 @@
 <script>
-	import { equipments } from '$lib/assets/store/data.js';
+	import { equipments } from '#lib/assets/store/data.js';
 	import EquipmentCard from './EquipmentCard.svelte';
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { formatHours, formatRub } from '$lib/format.js';
+	import { formatHours, formatRub } from '#lib/format.js';
 
 	let { data } = $props();
 

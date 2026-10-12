@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { formatRub } from '$lib/format.js';
+	import { formatRub } from '#lib/format.js';
 
 	interface Props {
 		id: number;
@@ -14,7 +14,7 @@
 </script>
 
 <li class="equipment-card">
-	<a class="equipment-card__link" href={resolve(`/equipment/${id}`)}>
+	<a class="equipment-card__link" href={resolve(`equipment/${id}`)}>
 		<img
 			class="equipment-card__image"
 			src={url}
