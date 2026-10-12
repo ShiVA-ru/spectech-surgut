@@ -21,13 +21,13 @@
 	.requisites__title {
 		margin-bottom: 10px;
 
-		font-size: 20px;
+		font-size: var(--fs-title);
 		font-weight: bold;
 	}
 
 	.requisites__legal-name {
 		margin-bottom: 10px;
-		font-size: 16px;
+		font-size: var(--fs-body);
 		font-weight: bold;
 	}
 
@@ -43,7 +43,7 @@
 		justify-content: space-between;
 		gap: 15px;
 
-		font-size: 14px;
+		font-size: var(--fs-label);
 	}
 
 	.requisites__item dt {

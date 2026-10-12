@@ -26,9 +26,9 @@
 
 <style>
 	.equipment-card {
-		background-color: rgb(255 255 255 / 0.9);
-		border: 1px solid rgb(299 231 235 / 0.8);
-		border-radius: 0.5rem;
+		background-color: var(--color-surface);
+		border: 1px solid var(--color-card-border);
+		border-radius: var(--radius-card);
 
 		overflow: hidden;
 		transition: box-shadow 0.3s ease-in-out;
@@ -36,7 +36,7 @@
 	}
 
 	.equipment-card:hover {
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		box-shadow: var(--shadow-card-hover);
 	}
 
 	.equipment-card__wrapper {
@@ -54,14 +54,14 @@
 	}
 
 	.equipment-card__title {
-		font-size: 16px;
+		font-size: var(--fs-body);
 		line-height: 1.2;
 		font-weight: 600;
 	}
 
 	.equipment-card__description {
-		font-size: 14px;
+		font-size: var(--fs-label);
 		line-height: 1.2;
-		color: rgb(107 114 128);
+		color: var(--color-muted);
 	}
 </style>

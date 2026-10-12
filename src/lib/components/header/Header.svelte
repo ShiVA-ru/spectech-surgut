@@ -23,8 +23,8 @@
 		align-items: center;
 		min-height: 50px;
 
-		background-color: #fff;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		background-color: var(--white-color);
+		box-shadow: var(--shadow-bar);
 		/*z-index: 1000;*/
 	}
 
@@ -37,9 +37,9 @@
 	}
 
 	.page-header__title {
-		font-size: 20px;
+		font-size: var(--fs-title);
 		font-weight: bold;
-		color: #333;
+		color: var(--color-ink);
 		text-align: center;
 	}
 

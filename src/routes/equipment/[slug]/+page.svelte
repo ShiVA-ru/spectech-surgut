@@ -63,12 +63,12 @@
 
 	.equipment__image {
 		max-width: 450px;
-		border-radius: 20px;
+		border-radius: var(--radius-media);
 		overflow: hidden;
 	}
 	.equipment__title {
 		text-align: center;
-		font-size: 24px;
+		font-size: var(--fs-headline);
 		font-weight: bold;
 	}
 </style>

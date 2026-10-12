@@ -25,13 +25,13 @@
 		align-items: center;
 		padding: 15px;
 
-		background-color: rgb(255 255 255 / 0.9);
-		border: 1px solid rgb(299 231 235 / 0.8);
-		border-radius: 0.5rem;
+		background-color: var(--color-surface);
+		border: 1px solid var(--color-card-border);
+		border-radius: var(--radius-card);
 	}
 
 	.advantage__item {
-		font-size: 16px;
+		font-size: var(--fs-body);
 		line-height: 1.25;
 		font-weight: 600;
 	}

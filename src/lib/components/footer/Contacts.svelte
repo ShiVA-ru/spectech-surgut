@@ -23,7 +23,7 @@
 
 <style>
 	.contacts__title {
-		font-size: 20px;
+		font-size: var(--fs-title);
 		font-weight: bold;
 		margin-bottom: 10px;
 	}

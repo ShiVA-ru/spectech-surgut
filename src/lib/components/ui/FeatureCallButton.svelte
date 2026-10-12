@@ -23,7 +23,7 @@
 		position: relative;
 		width: 70px;
 		height: 70px;
-		background: linear-gradient(135deg, lightblue 0%, darkblue 100%);
+		background: linear-gradient(135deg, var(--call-glow) 0%, var(--call-deep) 100%);
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
@@ -65,7 +65,7 @@
 		width: 70px;
 		height: 70px;
 		border-radius: 50%;
-		border: 3px solid lightblue;
+		border: 3px solid var(--call-glow);
 		opacity: 0;
 		animation: ripple-effect 2s infinite;
 	}
