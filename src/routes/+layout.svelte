@@ -52,7 +52,7 @@
 </svelte:head>
 
 <div class="page">
-	{#if isMaintenance === true}
+	{#if isMaintenance}
 		<Maintenance />
 	{:else}
 		{@render children()}
