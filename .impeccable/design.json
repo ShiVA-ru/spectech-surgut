@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-12T00:00:00Z",
+  "title": "Design System: Спецтехника Сургут",
+  "extensions": {
+    "colorMeta": {
+      "signal-blue": { "role": "primary", "displayName": "Signal Blue", "canonical": "#0000ff", "tonalRamp": ["#00001f","#00003d","#00005c","#00007a","#0000a3","#0000d1","#0000ff","#b3b3ff"] },
+      "call-glow": { "role": "secondary", "displayName": "Call Glow", "canonical": "#add8e6", "tonalRamp": ["#1d3a45","#2f5f72","#41849f","#5ba5c2","#7dbfd6","#add8e6","#cde8f0","#eaf6fa"] },
+      "call-deep": { "role": "secondary", "displayName": "Call Deep", "canonical": "#00008b", "tonalRamp": ["#00001a","#000033","#00004d","#000066","#00008b","#3333b0","#7a7acc","#c2c2e8"] },
+      "page-grey": { "role": "neutral", "displayName": "Page Grey", "canonical": "#f6f7f8", "tonalRamp": ["#1b1c1d","#363738","#58595a","#808182","#a9aaab","#cfd0d1","#e6e7e8","#f6f7f8"] },
+      "muted-slate": { "role": "neutral", "displayName": "Muted Slate", "canonical": "#6b7280", "tonalRamp": ["#14161a","#2a2e35","#40454f","#565c68","#6b7280","#8f95a0","#b8bcc3","#e1e3e6"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero title over the photo." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "body": { "displayName": "Body", "purpose": "Card titles and advantage labels." },
+      "label": { "displayName": "Label", "purpose": "Card descriptions, requisites." }
+    },
+    "shadows": [
+      { "name": "card-hover", "value": "0 0 10px rgba(0,0,0,0.2)", "purpose": "Equipment card hover." },
+      { "name": "bar", "value": "0 2px 4px rgba(0,0,0,0.1)", "purpose": "Detail header and hero." },
+      { "name": "call-float", "value": "0 8px 20px rgba(0,0,0,0.3)", "purpose": "Fixed call button." }
+    ],
+    "motion": [
+      { "name": "card-hover", "value": "box-shadow 0.3s ease-in-out", "purpose": "Card hover glow." },
+      { "name": "call-pulse", "value": "2s infinite", "purpose": "Call button pulse, ripple, handset shake." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "599px" },
+      { "name": "tablet", "value": "1199px" },
+      { "name": "footer-columns", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Equipment Card",
+      "kind": "card",
+      "refersTo": "equipment-card",
+      "description": "Photo-topped link card for one machine.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-img\"></div><div class=\"ds-card-body\"><h3>Фронтальный погрузчик</h3><p>Грузоподъемность: 3 т</p></div></div>",
+      "css": ".ds-card{width:260px;background:rgb(255 255 255/.9);border:1px solid #e5e7eb;border-radius:.5rem;overflow:hidden;transition:box-shadow .3s ease-in-out;cursor:pointer;font-family:Roboto,sans-serif}.ds-card:hover{box-shadow:0 0 10px rgba(0,0,0,.2)}.ds-card-img{height:120px;background:#d1d5db}.ds-card-body{display:flex;flex-direction:column;gap:20px;padding:10px}.ds-card h3{margin:0;font-size:16px;line-height:1.2;font-weight:600}.ds-card p{margin:0;font-size:14px;line-height:1.2;color:#6b7280}"
+    },
+    {
+      "name": "Advantage Card",
+      "kind": "card",
+      "refersTo": "advantage-card",
+      "description": "Icon plus short benefit label.",
+      "html": "<div class=\"ds-adv\"><svg width=\"25\" height=\"25\" viewBox=\"0 0 24 24\" fill=\"#0000ff\"><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg><span>Доставка на объект</span></div>",
+      "css": ".ds-adv{display:flex;gap:20px;align-items:center;padding:15px;background:rgb(255 255 255/.9);border:1px solid #e5e7eb;border-radius:.5rem;font:600 16px/1.25 Roboto,sans-serif;color:#333}"
+    },
+    {
+      "name": "Call Button",
+      "kind": "button",
+      "refersTo": "call-button",
+      "description": "Fixed round phone button, bottom-right.",
+      "html": "<a class=\"ds-call\" href=\"#\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"#fff\"><path d=\"M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z\"/></svg></a>",
+      "css": ".ds-call{display:flex;align-items:center;justify-content:center;width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,lightblue 0%,darkblue 100%);box-shadow:0 8px 20px rgba(0,0,0,.3);transition:transform .3s ease,box-shadow .3s ease}.ds-call:hover{transform:scale(1.1);box-shadow:0 12px 30px rgba(0,0,0,.4)}.ds-call:focus-visible{outline:2px solid #0000ff;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Clean Catalog",
+    "overview": "A light, orderly catalog on a pale grey page: a photographed hero, a row of short advantages, and a grid of equipment cards. The system is plain and sturdy. Surfaces are white, text is dark grey, and the only color is a single blue used for icons and link hover. There is no decoration; photographs of the machines carry the visual weight.",
+    "keyCharacteristics": [
+      "Light grey page, white cards, one blue accent.",
+      "Photography-led: machine photos fill card tops and the hero.",
+      "Flat at rest; a soft shadow appears only on hover.",
+      "Single Roboto family, bold for headings, semibold for card text.",
+      "Mobile-first single column that widens through auto-fit grids."
+    ],
+    "rules": [
+      { "name": "The One Blue Rule", "body": "Blue is the only chromatic color. It marks interactive or iconic elements, never large surfaces.", "section": "colors" },
+      { "name": "The Hover-Only Shadow Rule", "body": "Cards carry no shadow at rest; shadow is a response to pointer, not a decoration.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep surfaces white on the Page Grey field and let photos provide the color.",
+      "Do use Signal Blue only for icons, link hover, and call affordances.",
+      "Do keep the call button reachable on every screen.",
+      "Do reuse the 8px card radius, 20px gaps, and the Roboto size steps above."
+    ],
+    "donts": [
+      "Don't add decoration, gradients, or large blue surfaces beyond the call button.",
+      "Don't put shadows on cards at rest."
+    ]
+  }
+}
