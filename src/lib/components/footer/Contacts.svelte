@@ -10,9 +10,9 @@
 			<IconSvg iconId="phone" />
 			<span>{contacts.phoneNbsp}</span>
 		</a>
-		<a href="mailto:info@spectech-surgut.ru" class="contacts__item contacts__link">
+		<a href="mailto:{contacts.email}" class="contacts__item contacts__link">
 			<IconSvg iconId="mail" />
-			<span>info@spectech-surgut.ru</span>
+			<span>{contacts.email}</span>
 		</a>
 
 		<address class="contacts__item contacts__address">
