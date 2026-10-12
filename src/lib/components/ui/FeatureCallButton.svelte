@@ -157,6 +157,18 @@
 		}
 	}
 
+	.phone-button:focus-visible {
+		outline-offset: 4px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.phone-button,
+		.phone-icon,
+		.ripple {
+			animation: none;
+		}
+	}
+
 	/* Адаптив */
 	@media (max-width: 768px) {
 		.phone-button {

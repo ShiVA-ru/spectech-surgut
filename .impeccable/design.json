@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-12T00:00:00Z",
+  "generatedAt": "2026-10-13T00:00:00Z",
   "title": "Design System: Спецтехника Сургут",
   "extensions": {
     "colorMeta": {
@@ -23,7 +23,8 @@
     ],
     "motion": [
       { "name": "card-hover", "value": "box-shadow 0.3s ease-in-out", "purpose": "Card hover glow." },
-      { "name": "call-pulse", "value": "2s infinite", "purpose": "Call button pulse, ripple, handset shake." }
+      { "name": "call-pulse", "value": "2s infinite", "purpose": "Call button pulse, ripple, handset shake. Disabled under prefers-reduced-motion." },
+      { "name": "color-hover", "value": "color 0.3s ease", "purpose": "Link hover to Signal Blue." }
     ],
     "breakpoints": [
       { "name": "mobile", "value": "599px" },
@@ -47,6 +48,22 @@
       "description": "Icon plus short benefit label.",
       "html": "<div class=\"ds-adv\"><svg width=\"25\" height=\"25\" viewBox=\"0 0 24 24\" fill=\"#0000ff\"><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg><span>Доставка на объект</span></div>",
       "css": ".ds-adv{display:flex;gap:20px;align-items:center;padding:15px;background:rgb(255 255 255/.9);border:1px solid #e5e7eb;border-radius:.5rem;font:600 16px/1.25 Roboto,sans-serif;color:#333}"
+    },
+    {
+      "name": "Detail Rows",
+      "kind": "custom",
+      "refersTo": "detail-row",
+      "description": "Label and value list for specs and rental terms on the equipment page.",
+      "html": "<dl class=\"ds-rows\"><div class=\"ds-row\"><dt>Грузоподъёмность</dt><dd>5 т</dd></div><div class=\"ds-row\"><dt>Стоимость работы</dt><dd>По запросу</dd></div></dl>",
+      "css": ".ds-rows{margin:0;width:320px;background:#fff;border:1px solid #e5e7eb;border-radius:.5rem;font-family:Roboto,sans-serif}.ds-row{display:flex;justify-content:space-between;gap:15px;padding:10px 15px;font-size:16px;line-height:1.25}.ds-row+.ds-row{border-top:1px solid #e5e7eb}.ds-row dt{color:#6b7280}.ds-row dd{margin:0;font-weight:600;text-align:right;white-space:nowrap}"
+    },
+    {
+      "name": "Maintenance Card",
+      "kind": "card",
+      "refersTo": "equipment-card",
+      "description": "Single centered card for the maintenance page: photo, message, phone first.",
+      "html": "<div class=\"ds-maint\"><div class=\"ds-maint-img\"></div><div class=\"ds-maint-body\"><h1>Сайт на техническом обслуживании</h1><a class=\"ds-maint-phone\" href=\"#\">+7 (912) 815-95-44</a></div></div>",
+      "css": ".ds-maint{width:340px;overflow:hidden;background:#fff;border:1px solid #e5e7eb;border-radius:.5rem;font-family:Roboto,sans-serif;color:#333}.ds-maint-img{height:110px;background:#d1d5db}.ds-maint-body{display:grid;gap:14px;padding:20px}.ds-maint h1{margin:0;font-size:24px;line-height:1.2;font-weight:700}.ds-maint-phone{width:fit-content;font-size:24px;font-weight:700;color:inherit;text-decoration:none;transition:color .3s ease}.ds-maint-phone:hover{color:#0000ff}.ds-maint-phone:focus-visible{outline:2px solid #0000ff;outline-offset:2px}"
     },
     {
       "name": "Call Button",
@@ -75,11 +92,14 @@
       "Do keep surfaces white on the Page Grey field and let photos provide the color.",
       "Do use Signal Blue only for icons, link hover, and call affordances.",
       "Do keep the call button reachable on every screen.",
-      "Do reuse the 8px card radius, 20px gaps, and the Roboto size steps above."
+      "Do reuse the 8px card radius, 20px gaps, and the Roboto size steps above.",
+      "Do take every color, size, radius, and shadow from the tokens in `layout.css`.",
+      "Do keep a visible keyboard focus ring on anything interactive, and stop looping animation under `prefers-reduced-motion`."
     ],
     "donts": [
       "Don't add decoration, gradients, or large blue surfaces beyond the call button.",
-      "Don't put shadows on cards at rest."
+      "Don't put shadows on cards at rest.",
+      "Don't use emoji as icons; use the SVG sprite."
     ]
   }
 }

@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import '@fontsource-variable/roboto/wght.css';
 
 /* Design tokens — see DESIGN.md */
 :root {
@@ -13,11 +14,10 @@
 	--color-ink: #333333;
 	--color-muted: rgb(107 114 128);
 	--color-hairline: rgb(229 231 235);
-	/* Computes to rgb(255 231 235 / 0.8): the original value had an out-of-range channel (299) */
-	--color-card-border: rgb(255 231 235 / 0.8);
+	--color-card-border: var(--color-hairline);
 
 	/* Type */
-	--font-sans: 'Roboto', sans-serif;
+	--font-sans: 'Roboto Variable', 'Roboto', system-ui, sans-serif;
 	--fs-label: 14px;
 	--fs-body: 16px;
 	--fs-title: 20px;
@@ -29,6 +29,17 @@
 	--radius-media: 20px;
 	--shadow-bar: 0 2px 4px rgba(0, 0, 0, 0.1);
 	--shadow-card-hover: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyboard focus: one visible ring for every link and control */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+	outline: 2px solid var(--primary-color);
+	outline-offset: 2px;
+}
+
+::selection {
+	background-color: var(--primary-color);
+	color: var(--white-color);
 }
 
 .visually-hidden {
