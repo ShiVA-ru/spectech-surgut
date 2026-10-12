@@ -1,14 +1,18 @@
+<script>
+	import { contacts } from '$lib/contacts.js';
+</script>
+
 <section class="requisites">
 	<h3 class="requisites__title">Реквизиты</h3>
-	<h4 class="requisites__legal-name">ИП Мастеров Денис Иванович</h4>
+	<h4 class="requisites__legal-name">{contacts.company}</h4>
 	<dl class="requisites__content">
 		<div class="requisites__item">
 			<dt>ИНН:</dt>
-			<dd>8602026226</dd>
+			<dd>{contacts.inn}</dd>
 		</div>
 		<div class="requisites__item">
 			<dt>ОГРНИП:</dt>
-			<dd>313860224700058</dd>
+			<dd>{contacts.ogrnip}</dd>
 		</div>
 		<div class="requisites__item">
 			<dt>Юр. адрес:</dt>
@@ -21,13 +25,13 @@
 	.requisites__title {
 		margin-bottom: 10px;
 
-		font-size: 20px;
+		font-size: var(--fs-title);
 		font-weight: bold;
 	}
 
 	.requisites__legal-name {
 		margin-bottom: 10px;
-		font-size: 16px;
+		font-size: var(--fs-body);
 		font-weight: bold;
 	}
 
@@ -43,7 +47,7 @@
 		justify-content: space-between;
 		gap: 15px;
 
-		font-size: 14px;
+		font-size: var(--fs-label);
 	}
 
 	.requisites__item dt {

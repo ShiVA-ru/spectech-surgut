@@ -69,7 +69,7 @@
 		min-height: 100vh;
 		min-height: 100dvh;
 
-		font-family: 'Roboto', sans-serif;
-		background-color: rgb(246 247 248 / var(--tw-bg-opacity, 1));
+		font-family: var(--font-sans);
+		background-color: var(--color-page);
 	}
 </style>

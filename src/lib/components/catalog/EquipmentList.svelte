@@ -14,9 +14,8 @@
 
 <style>
 	.equipment__title {
-		font-size: 24px;
+		font-size: var(--fs-headline);
 		font-weight: bold;
-		/*margin-bottom: 5px;*/
 	}
 
 	.equipment__list {
@@ -24,6 +23,5 @@
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		grid-gap: 20px;
 		padding: 20px 0;
-		/*background-color: rgb(246 247 248 / var(--tw-bg-opacity, 1));*/
 	}
 </style>

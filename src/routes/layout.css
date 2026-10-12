@@ -1,19 +1,44 @@
 @import 'tailwindcss';
 
+/* Design tokens — see DESIGN.md */
 :root {
-	.visually-hidden {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip: rect(0, 0, 0, 0);
-		white-space: nowrap;
-		border-width: 0;
-	}
-
-	--primary-color: blue;
+	/* Colors */
+	--primary-color: #0000ff;
 	--white-color: #ffffff;
 	--black-color: #000000;
+	--call-glow: #add8e6;
+	--call-deep: #00008b;
+	--color-page: #f6f7f8;
+	--color-surface: rgb(255 255 255 / 0.9);
+	--color-ink: #333333;
+	--color-muted: rgb(107 114 128);
+	--color-hairline: rgb(229 231 235);
+	/* Computes to rgb(255 231 235 / 0.8): the original value had an out-of-range channel (299) */
+	--color-card-border: rgb(255 231 235 / 0.8);
+
+	/* Type */
+	--font-sans: 'Roboto', sans-serif;
+	--fs-label: 14px;
+	--fs-body: 16px;
+	--fs-title: 20px;
+	--fs-headline: 24px;
+	--fs-display: 32px;
+
+	/* Shape and depth */
+	--radius-card: 0.5rem;
+	--radius-media: 20px;
+	--shadow-bar: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--shadow-card-hover: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
 }

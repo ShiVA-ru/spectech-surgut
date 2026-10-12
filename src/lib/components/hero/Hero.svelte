@@ -64,8 +64,8 @@
 		padding: 20px;
 		height: 320px;
 
-		color: #fff;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		color: var(--white-color);
+		box-shadow: var(--shadow-bar);
 
 		overflow: hidden;
 	}
@@ -80,7 +80,7 @@
 	}
 
 	.hero__title {
-		font-size: 32px;
+		font-size: var(--fs-display);
 		line-height: 1.2;
 		font-weight: bold;
 		margin: 0;

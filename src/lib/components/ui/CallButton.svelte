@@ -5,7 +5,7 @@
 
 <a href="tel:{contacts.phoneLink}" class="call">
 	<IconSvg iconId="phone-solid" width={30} />
-	<span class="visually-hidden">Позвонить по телефону {contacts.phoneLink}</span>
+	<span class="visually-hidden">Позвонить по телефону {contacts.phone}</span>
 </a>
 
 <style>
