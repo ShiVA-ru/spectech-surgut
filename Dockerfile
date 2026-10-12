@@ -3,7 +3,6 @@ FROM oven/bun AS frontend-builder
 WORKDIR /app
 COPY package.json ./
 COPY bun.lock ./
-COPY .env ./
 COPY . .
 RUN bun ci
 RUN bun run build
