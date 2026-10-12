@@ -1,168 +1,195 @@
 <script>
-  import { contacts } from '$lib/contacts.js';
+	import { contacts } from '$lib/contacts.js';
+	import IconSvg from '$lib/components/ui/icon-svg/IconSvg.svelte';
+
+	// «ул. Название» и «д. 9» не должны разрываться при переносе строки
+	const address = contacts.address.replace(/(ул\.|д\.) /g, '$1 ');
 </script>
 
-<div class="maintenance">
-  <div class="maintenance__card">
-    <div class="maintenance__icon">🛠️</div>
-    <h1>Сайт на техническом обслуживании</h1>
-    <p class="maintenance__lead">
-      Проводим плановое обслуживание сайта, чтобы сделать его быстрее и удобнее.
-      Пожалуйста, загляните позже.
-    </p>
+<main class="maintenance">
+	<article class="maintenance__card">
+		<img
+			class="maintenance__photo"
+			src="/images/excavator-800.webp"
+			srcset="/images/excavator-420.webp 420w, /images/excavator-800.webp 800w"
+			sizes="(max-width: 600px) 100vw, 560px"
+			alt=""
+			width="800"
+			height="400"
+			fetchpriority="high"
+		/>
 
-    <div class="maintenance__contacts">
-      <h2>Связаться с нами</h2>
-      <ul>
-        <li>
-          <span class="contact__icon">📞</span>
-          <a href="tel:{contacts.phoneLink}">{contacts.phone}</a>
-        </li>
-        <li>
-          <span class="contact__icon">✉️</span>
-          <a href="mailto:{contacts.email}">{contacts.email}</a>
-        </li>
-        <li>
-          <span class="contact__icon">📍</span>
-          <span>{contacts.address}</span>
-        </li>
-      </ul>
-    </div>
+		<div class="maintenance__body">
+			<h1 class="maintenance__title">Сайт на техническом обслуживании</h1>
+			<p class="maintenance__lead">
+				Проводим плановое обслуживание сайта, чтобы сделать его быстрее и удобнее. Пожалуйста,
+				загляните позже.
+			</p>
 
-    <div class="maintenance__requisites">
-      <p>{contacts.company}</p>
-      <p>ИНН: {contacts.inn} · ОГРНИП: {contacts.ogrnip}</p>
-    </div>
-  </div>
-</div>
+			<section class="maintenance__contacts" aria-labelledby="contacts-title">
+				<h2 id="contacts-title" class="maintenance__subtitle">Связаться с нами</h2>
+
+				<a class="maintenance__phone" href="tel:{contacts.phoneLink}">
+					<IconSvg iconId="phone" width={24} fill="primary-color" />
+					<span>{contacts.phone}</span>
+				</a>
+
+				<ul class="maintenance__list">
+					<li>
+						<IconSvg iconId="mail" fill="primary-color" />
+						<a href="mailto:{contacts.email}">{contacts.email}</a>
+					</li>
+					<li>
+						<IconSvg iconId="location" fill="primary-color" />
+						<address>{address}</address>
+					</li>
+				</ul>
+			</section>
+
+			<div class="maintenance__requisites">
+				<p>{contacts.company}</p>
+				<p>ИНН: {contacts.inn} · ОГРНИП: {contacts.ogrnip}</p>
+			</div>
+		</div>
+	</article>
+</main>
 
 <style>
-  :global(body) {
-    margin: 0;
-  }
+	.maintenance {
+		display: grid;
+		place-items: center;
+		min-height: 100vh;
+		min-height: 100dvh;
+		padding: 20px;
 
-  .maintenance {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+		background-color: var(--color-page);
+		color: var(--color-ink);
+		font-family: var(--font-sans);
+	}
 
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 10px;
+	.maintenance__card {
+		width: 100%;
+		max-width: 560px;
+		overflow: hidden;
 
-    background: linear-gradient(135deg, #1a3a52 0%, #2c5f7f 100%);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #333;
-  }
+		background-color: var(--white-color);
+		border: 1px solid var(--color-card-border);
+		border-radius: var(--radius-card);
+	}
 
-  .maintenance__card {
-    background: #fff;
-    max-width: 560px;
-    width: 100%;
-    padding: 48px 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  }
+	.maintenance__photo {
+		display: block;
+		width: 100%;
+		height: 220px;
+		object-fit: cover;
+	}
 
-  .maintenance__icon {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 24px;
-    background: #f0a500;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 44px;
-  }
+	.maintenance__body {
+		display: grid;
+		gap: 20px;
+		padding: 28px 28px 24px;
+	}
 
-  h1 {
-    margin: 0 0 16px;
-    font-size: 1.5rem;
-    color: #1a3a52;
-  }
+	.maintenance__title {
+		font-size: var(--fs-headline);
+		font-weight: 700;
+		line-height: 1.2;
+		text-wrap: balance;
+	}
 
-  .maintenance__lead {
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0 0 28px;
-  }
+	.maintenance__lead {
+		margin-top: -8px;
+		font-size: var(--fs-body);
+		line-height: 1.5;
+		color: var(--color-muted);
+		max-width: 60ch;
+	}
 
-  /* Контакты */
-  .maintenance__contacts {
-    border-top: 1px solid #eee;
-    padding-top: 24px;
-  }
+	.maintenance__contacts {
+		display: grid;
+		gap: 14px;
+		padding-top: 20px;
+		border-top: 1px solid var(--color-hairline);
+	}
 
-  .maintenance__contacts h2 {
-    font-size: 1.1rem;
-    color: #1a3a52;
-    margin: 0 0 16px;
-  }
+	.maintenance__subtitle {
+		font-size: var(--fs-title);
+		font-weight: 700;
+	}
 
-  .maintenance__contacts ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+	.maintenance__phone {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		width: fit-content;
 
-  .maintenance__contacts li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 0.95rem;
-    color: #555;
-  }
+		font-size: var(--fs-headline);
+		font-weight: 700;
+		font-variant-numeric: tabular-nums;
+		color: inherit;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
 
-  .contact__icon {
-    font-size: 1.1rem;
-    flex-shrink: 0;
-  }
+	.maintenance__phone:hover {
+		color: var(--primary-color);
+	}
 
-  .maintenance__contacts a {
-    color: #2c5f7f;
-    text-decoration: none;
-    font-weight: 600;
-  }
+	.maintenance__list {
+		display: grid;
+		gap: 8px;
+		list-style: none;
+		font-size: var(--fs-body);
+		line-height: 1.3;
+	}
 
-  .maintenance__contacts a:hover {
-    text-decoration: underline;
-  }
+	.maintenance__list li {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
 
-  /* Реквизиты */
-  .maintenance__requisites {
-    margin-top: 28px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-    font-size: 0.8rem;
-    color: #999;
-  }
+	.maintenance__list a {
+		color: inherit;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		transition: color 0.3s ease;
+	}
 
-  .maintenance__requisites p {
-    margin: 2px 0;
-  }
+	.maintenance__list a:hover {
+		color: var(--primary-color);
+	}
 
-  /* Адаптивность */
-  @media (max-width: 480px) {
-    .maintenance__card {
-      padding: 32px 24px;
-      border-radius: 8px;
-    }
+	.maintenance__list address {
+		font-style: normal;
+	}
 
-    h1 {
-      font-size: 1.3rem;
-    }
+	.maintenance__requisites {
+		display: grid;
+		gap: 2px;
+		padding-top: 16px;
+		border-top: 1px solid var(--color-hairline);
 
-    .maintenance__icon {
-      width: 72px;
-      height: 72px;
-      font-size: 36px;
-    }
-  }
+		font-size: var(--fs-label);
+		font-variant-numeric: tabular-nums;
+		color: var(--color-muted);
+	}
+
+	@media (max-width: 480px) {
+		.maintenance {
+			padding: 10px;
+		}
+
+		.maintenance__photo {
+			height: 160px;
+		}
+
+		.maintenance__body {
+			padding: 20px 18px 18px;
+		}
+
+		.maintenance__phone {
+			font-size: var(--fs-title);
+		}
+	}
 </style>
