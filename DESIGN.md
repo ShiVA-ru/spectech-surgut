@@ -93,7 +93,7 @@ A neutral grey-and-white field with one saturated blue.
 - **Card White** (#ffffff): header, footer, cards (cards use 90% white).
 - **Ink** (#333333): header title text; default body text is browser/Tailwind default.
 - **Muted Slate** (#6b7280): card descriptions.
-- **Hairline** (#e5e7eb): footer divider.
+- **Hairline** (#e5e7eb): footer divider and the 1px border of cards.
 - **Ink Black** (#000000): back-arrow icon on the header.
 
 ### Named Rules
@@ -134,7 +134,7 @@ Gently rounded rectangles (8px) for cards, a larger 20px radius for the detail-p
 - **Call button (simple, unused variant):** 50px outlined blue circle at 60% opacity that fills and rotates 90° on hover.
 
 ### Cards / Containers
-- **Equipment card:** white 90%, 1px light border, 8px radius, 235px photo on top, 10px padded text block with 16px semibold title and 14px slate description; whole card is a link.
+- **Equipment card:** white 90%, 1px Hairline border, 8px radius, 235px photo on top, 10px padded text block with 16px semibold title and 14px slate description; whole card is a link.
 - **Advantage card:** same surface, 15px padding, 25px blue icon beside a semibold label.
 
 ### Navigation

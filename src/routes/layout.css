@@ -14,8 +14,7 @@
 	--color-ink: #333333;
 	--color-muted: rgb(107 114 128);
 	--color-hairline: rgb(229 231 235);
-	/* Computes to rgb(255 231 235 / 0.8): the original value had an out-of-range channel (299) */
-	--color-card-border: rgb(255 231 235 / 0.8);
+	--color-card-border: var(--color-hairline);
 
 	/* Type */
 	--font-sans: 'Roboto Variable', 'Roboto', system-ui, sans-serif;
