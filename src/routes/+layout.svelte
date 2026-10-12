@@ -1,11 +1,10 @@
 <script lang="ts">
+	import type { LayoutProps } from './$types';
 	import './layout.css';
-	// import favicon from '$lib/assets/favicon.svg';
-	import FeatureCallButton from '$lib/components/ui/FeatureCallButton.svelte';
-	import Maintenance from '$lib/components/Maintenance.svelte';
-	const isMaintenance = true;
-
-	let { children } = $props();
+	// import favicon from '#lib/assets/favicon.svg';
+	import FeatureCallButton from '#lib/components/ui/FeatureCallButton.svelte';
+	import Maintenance from '#lib/components/Maintenance.svelte';
+	let { children, data }: LayoutProps = $props();
 
 	const siteTitle = 'Спецтехника | Сургут';
 	const metaDescription =
@@ -52,7 +51,7 @@
 </svelte:head>
 
 <div class="page">
-	{#if isMaintenance}
+	{#if data.isMaintenance}
 		<Maintenance />
 	{:else}
 		{@render children()}

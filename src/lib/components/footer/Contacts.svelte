@@ -1,6 +1,6 @@
 <script>
-	import IconSvg from '$lib/components/ui/icon-svg/IconSvg.svelte';
-	import { contacts } from '$lib/contacts.js';
+	import IconSvg from '#lib/components/ui/icon-svg/IconSvg.svelte';
+	import { contacts } from '#lib/contacts.js';
 </script>
 
 <section class="contacts">

@@ -1,7 +1,7 @@
 <script>
-	import Contacts from '$lib/components/footer/Contacts.svelte';
-	import Divider from '$lib/components/ui/Divider.svelte';
-	import Requisites from '$lib/components/footer/Requisites.svelte';
+	import Contacts from '#lib/components/footer/Contacts.svelte';
+	import Divider from '#lib/components/ui/Divider.svelte';
+	import Requisites from '#lib/components/footer/Requisites.svelte';
 </script>
 
 <footer class="bg-white page-footer">

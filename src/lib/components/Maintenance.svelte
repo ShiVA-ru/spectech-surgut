@@ -1,6 +1,6 @@
 <script>
-	import { contacts } from '$lib/contacts.js';
-	import IconSvg from '$lib/components/ui/icon-svg/IconSvg.svelte';
+	import { contacts } from '#lib/contacts.js';
+	import IconSvg from '#lib/components/ui/icon-svg/IconSvg.svelte';
 
 	// «ул. Название» и «д. 9» не должны разрываться при переносе строки
 	const address = contacts.address.replace(/(ул\.|д\.) /g, '$1 ');
