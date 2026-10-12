@@ -149,7 +149,7 @@ Gently rounded rectangles (8px) for cards, a larger 20px radius for the detail-p
 - White bordered list (Hairline border, 8px radius). Each row is a muted label on the left and a semibold value on the right, 10px 15px padding, separated by Hairline lines. Values never wrap; labels do. An unknown value reads "По запросу" instead of being invented.
 
 ### Maintenance card
-- White card with Hairline border and 8px radius, a 220px photo (160px on phones) on top, then title, lead, a prominent phone link (24px bold), secondary email and address rows with blue sprite icons, and muted requisites at the bottom. Flat, no shadow.
+- White card with Hairline border and 8px radius, a 220px photo (160px on phones) on top, then title, lead, a prominent phone link (24px bold), secondary email and address rows with blue sprite icons, and muted requisites at the bottom. Flat, no shadow. From 900px wide it becomes a two-column card (max 1040px): photo filling the left half, text centered vertically on the right with 32px title and phone.
 
 ### Focus
 - Every link and control shows a 2px Signal Blue outline with 2px offset on keyboard focus. Equipment cards draw it inset (-2px) because the card clips overflow; the call button uses a 4px offset.

@@ -11,8 +11,12 @@
 		<img
 			class="maintenance__photo"
 			src="/images/excavator-800.webp"
-			srcset="/images/excavator-420.webp 420w, /images/excavator-800.webp 800w"
-			sizes="(max-width: 600px) 100vw, 560px"
+			srcset="
+				/images/excavator-420.webp 420w,
+				/images/excavator-800.webp 800w,
+				/images/excavator.webp 1200w
+			"
+			sizes="(min-width: 900px) 520px, (max-width: 600px) 100vw, 560px"
 			alt=""
 			width="800"
 			height="400"
@@ -173,6 +177,37 @@
 		font-size: var(--fs-label);
 		font-variant-numeric: tabular-nums;
 		color: var(--color-muted);
+	}
+
+	@media (min-width: 900px) {
+		.maintenance__card {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			max-width: 1040px;
+			min-height: 540px;
+		}
+
+		.maintenance__photo {
+			height: 100%;
+		}
+
+		.maintenance__body {
+			align-content: center;
+			gap: 24px;
+			padding: 56px 56px 48px;
+		}
+
+		.maintenance__title {
+			font-size: var(--fs-display);
+		}
+
+		.maintenance__lead {
+			font-size: 18px;
+		}
+
+		.maintenance__phone {
+			font-size: var(--fs-display);
+		}
 	}
 
 	@media (max-width: 480px) {
