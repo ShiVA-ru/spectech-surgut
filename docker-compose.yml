@@ -8,4 +8,6 @@ services:
       # - DATABASE_URL=postgresql://postgres:password@db:5432/spectech
     # depends_on:
     # - db
+    env_file:
+      - .env
     restart: unless-stopped
