@@ -131,7 +131,6 @@ Gently rounded rectangles (8px) for cards, a larger 20px radius for the detail-p
 
 ### Buttons
 - **Call button (fixed):** 70px circle (60px under 768px) bottom-right, blue gradient, white handset icon that shakes, three expanding ripple rings, scale-up on hover.
-- **Call button (simple, unused variant):** 50px outlined blue circle at 60% opacity that fills and rotates 90° on hover.
 
 ### Cards / Containers
 - **Equipment card:** white 90%, 1px Hairline border, 8px radius, 235px photo on top, 10px padded text block with 16px semibold title and 14px slate description; whole card is a link.
